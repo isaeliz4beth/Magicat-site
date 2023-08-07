@@ -1,16 +1,234 @@
+/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-/* Estilo para tornar o conteúdo mais legível sobre o fundo da imagem */
-header, nav, .hero, .game-list, footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Resto do seu CSS permanece o mesmo */
+/* Estilos para o header */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #5f9992;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+/* Estilos para a seção de desenvolvedores */
+.developers {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.developer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.developer img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.developer-info {
+  margin-top: 10px;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 2px solid #5f9992;
+}
+
+/* Estilos para o menu */
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #444;
+  border-bottom: 2px solid #5f9992;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.menu li a:hover {
+  color: #5f9992;
+  background-color: #333;
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+  padding: 20px;
+}
+
+/* Estilos para o botão CTA */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #5f9992;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: #5a5454;
+}
+
+/* Estilos para o Slider */
+.slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 400px; /* Ajuste a altura conforme necessário */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animação do Slider */
+.slider .slide:first-child {
+  opacity: 1;
+}
+
+@keyframes slide {
+  0%, 100% {
+      opacity: 0;
+  }
+  20%, 80% {
+      opacity: 1;
+  }
+}
+
+.slider .slide {
+  animation: slide 5s infinite;
+}
+
+/* Mais estilos para os game-cards e outros elementos */
+/* ... */
+
+
+/* Estilos para os game-cards */
+.game-list {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: calc(33.333% - 40px);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.game-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.game-card h4 {
+  margin-top: 10px;
+  color: #333;
+  font-size: 24px;
+}
+
+.game-card p {
+  margin-top: 5px;
+  color: #777;
+}
+
+.game-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #f0efef;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+.game-card a:hover {
+  background-color: #5a5454;
+  color: #fff;
+}
+
+/* Gradiente de fundo na seção de herói */
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('img/florest.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* ... (seu código posterior) ... */

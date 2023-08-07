@@ -1,85 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Games</title>
+    <title>Melhor Jogo de RPG - Página Inicial</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Inclua os arquivos da biblioteca Slick Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <style>
+        /* Adicione seus estilos CSS aqui */
+    </style>
+    <script>
+        // Adicione o código JavaScript para controlar o slider aqui
+    </script>
 </head>
 <body style="background-image: url('./img/florest.png');">
     <header>
-        <img src="img/logo_branco.png" alt="Logo da Página" width="150px" height="150" >
-        <h1>Melhor jogo de RPG</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">SOBRE O JOGO</a></li>
+                <li><a href="desenvolvedores.html">DESENVOLVEDORES</a></li>
+            </ul>
+        </nav>
+        <img src="img/logo_branco.png" alt="Logo da Página" width="175" height="175">
+        <h1>Melhor Jogo de RPG</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
+
     <section class="hero">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="img/slider1.jpg" alt="Slider 1">
+                </div>
+                <div class="slide">
+                    <img src="img/slider2.jpg" alt="Slider 2">
+                </div>
+                <div class="slide">
+                    <img src="img/slider3.jpg" alt="Slider 3">
+                </div>
+            </div>
+        </div>
         <h2>Bem-vindo ao mundo do nosso RPG</h2>
         <p>Explore e mergulhe em aventuras incríveis.</p>
         <a href="#" class="cta-button">Ver Jogos</a>
     </section>
+
     <section class="game-list">
-        <h3>Sobre o jogo</h3>
+        <h3>Conheça Nosso Jogo</h3>
         <div class="carousel">
             <div class="game-card">
                 <img src="img/dayflorest.png" alt="Nome do Jogo 1">
                 <h4>Nome do Jogo 1</h4>
-                <p>Descrição breve do Jogo 1.</p>
+                <p>Uma descrição breve e empolgante do Jogo 1. Entre na ação agora mesmo!</p>
                 <a href="#">Saiba Mais</a>
             </div>
-            <div class="game-card">
-                <img src="game2.jpg" alt="Nome do Jogo 2">
-                <h4>Nome do Jogo 2</h4>
-                <p>Descrição breve do Jogo 2.</p>
-                <a href="#">Saiba Mais</a>
-            </div>
-            <div class="game-card">
-                <img src="game3.jpg" alt="Nome do Jogo 3">
-                <h4>Nome do Jogo 3</h4>
-                <p>Descrição breve do Jogo 3.</p>
-                <a href="#">Saiba Mais</a>
-            </div>
-            <!-- Adicione mais jogos aqui -->
+            <!-- Adicione mais game-cards conforme necessário -->
         </div>
     </section>
+
     <footer>
         <p>&copy; 2023 Jogos Incríveis. Todos os direitos reservados.</p>
     </footer>
-    <!-- Inclua o arquivo da biblioteca Slick Carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <!-- Inicialize o carrossel -->
-    <script>
-        $(document).ready(function() {
-            $('.carousel').slick({
-                dots: true,
-                arrows: false,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
 </body>
 </html>
