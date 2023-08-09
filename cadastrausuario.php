@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
     else{
         $sql = "INSERT INTO usuarios (usu_nome, usu_senha, usu_ativo) 
-        VALUES('$nome','$senha','n')";
+        VALUES('$nome','$senha','s')";
         mysqli_query($link, $sql);
         #CADASTROU USUARIO E JOGA MENSAGEM NA TELA E DIRECIONA PARA LISTA USUARIO
         echo"<script>window.alert('USUARIO CADASTRADO');</script>";

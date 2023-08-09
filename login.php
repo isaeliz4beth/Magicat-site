@@ -1,38 +1,35 @@
 <?php
-    #ABRE UMA VARIAVEL SESSÃO
-    session_start();
-    #SOLICITA O ARQUIVO CONECTADB
-    include("conectadb.php");
-    #EVENTO APÓS O CLICK NO BOTÃO LOGAR
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $nome = $_POST['nome'];
-        $senha = $_POST['senha'];
+session_start();
+include("conectadb.php");
 
-        
-        #QUERY DE BANCO DE DADOS
-        $sql = "SELECT COUNT(usu_id) FROM usuarios WHERE usu_nome = '$nome' AND usu_senha = '$senha' AND usu_ativo = 's'";
-        $retorno = mysqli_query($link, $sql);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST['nome'];
+    $senha = $_POST['senha'];
 
-        #TODO RETORNO DO BANCO É RETORNADO EM ARRAY EM PHP
-        while($tbl = mysqli_fetch_array($retorno)){
-            $cont = $tbl[0];
-        }
-        
-        #VERIFICA SE USUARIO EXISTE
-        #SE $CONT == 1 ELE EXISTE E FAZ LOGIN
-        #SE $CONT == 0 ELE NÃO EXISTE E USUARIO NÃO ESTÁ CADASTRADO
-        if($cont == 1){
-            $sql = "SELECT * FROM usuarios WHERE usu_nome = '$nome' 
-            AND usu_senha = '$senha' AND usu_ativo = 's'";
-            $_SESSION['nomeusuario'] = $nome;
-            
-            #DIRECIONA USUARIO PARA O ADM
-            echo"<script>window.location.href='index.php';</script>";
-        }
-        else{
-            echo"<script>window.alert('USUARIO OU SENHA INCORRETO');</script>";
-        }
+    $sql = "SELECT COUNT(usu_id) FROM usuarios WHERE usu_nome = ? AND usu_senha = ? AND usu_ativo = 's'";
+    $stmt = mysqli_prepare($link, $sql);
+    mysqli_stmt_bind_param($stmt, "ss", $nome, $senha);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $cont);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
+
+    if ($cont == 1) {
+        $sql = "SELECT * FROM usuarios WHERE usu_nome = ? AND usu_senha = ? AND usu_ativo = 's'";
+        $stmt = mysqli_prepare($link, $sql);
+        mysqli_stmt_bind_param($stmt, "ss", $nome, $senha);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_assoc($result);
+        mysqli_stmt_close($stmt);
+
+        $_SESSION['nomeusuario'] = $row['usu_nome'];
+        header("Location: index.php");
+        exit();
+    } else {
+        $login_error = "Usuário ou senha incorretos";
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +48,7 @@
         <input type="password" name="senha" placeholder="SENHA" required>
         <p></p>
         <input type="submit" name="login" value="LOGIN">
+        <?php if (isset($login_error)) echo "<p>$login_error</p>"; ?>
     </form>
     
 </body>

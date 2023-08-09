@@ -10,7 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melhor Jogo de RPG - Página Inicial</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="images/flaticon.png" href="images/flaticon.png">
     <link rel="stylesheet" href="css/slider.css">
+    <head>
+    <!-- ... outros elementos do head ... -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body, h3, h4, h5, h6, p {
+            font-family: 'FonteCorpo';
+        }
+        h1, h2 {
+            text-align: center;
+            font-family: 'MinhaFonte';          
+        }
+
+        @font-face {
+                font-family: 'MinhaFonte';
+                src: url(fonts/VCR_OSD_MONO_1.001.ttf);
+                }
+
+        @font-face {
+        font-family: 'FonteCorpo';
+        src: url(fonts/Montserrat-Thin.ttf);
+        }
+        </style>
+</head>
+
 </head>
 <body style="background-image: url('./img/florest.png');">
     <header>
@@ -43,7 +68,7 @@
                 ?>  
             </ul>
         </nav>
-        <img src="img/logo_branco.png" alt="Logo da Página" width="175" height="175">
+        <img src="img/logo_branco.png" alt="Logo da Página" width="300" height="300">
         <h1>Melhor Jogo de RPG</h1>
     </header>
 
