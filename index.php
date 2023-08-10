@@ -36,10 +36,9 @@
         </style>
 </head>
 
-</head>
 <body style="background-image: url('./img/florest.png');">
     <header>
-        <nav>
+        <nav> 
             <ul class="menu">
                 <li><a href="index.php">HOME</a></li>
                 <li><a href="Sobreojogo.html">SOBRE O JOGO</a></li>
@@ -67,13 +66,39 @@
                 }
                 ?>  
             </ul>
-        </nav>
-        <img src="img/logo_branco.png" alt="Logo da Página" width="300" height="300">
+            </nav>
+    <!-- /* ________________________________________________________________________________________ */ -->
+        <div class="imagemlogo">
+            <img src="img/logoINDEX.png" alt="Logo do Projeto" height="100">
+        </div>
         <h1>Melhor Jogo de RPG</h1>
     </header>
+    <!-- /* ________________________________________________________________________________________ */ -->
 
+        <div class="carousel">
+            <div class="game-card">
+                <img src="img/dayflorest.png" alt="Nome do Jogo 1">
+                <h4>Nome do Jogo 1</h4>
+                <p>Uma descrição breve e empolgante do Jogo 1. Entre na ação agora mesmo!</p>
+                <a href="#">Saiba Mais</a>
+            </div>
+            <div class="game-card">
+                <img src="img/dayflorest.png" alt="Nome do Jogo 1">
+                <h4>Nome do Jogo 1</h4>
+                <p>Uma descrição breve e empolgante do Jogo 1. Entre na ação agora mesmo!</p>
+                <a href="#">Saiba Mais</a>
+            </div>
+        </div>
+    <!-- /* ________________________________________________________________________________________ */ -->
     <section class="hero">
-        <div class="slider-container">
+        <div class="hero-content">
+            <h2>Bem-vindo ao mundo do nosso RPG!</h2>
+            <p>Explore e mergulhe em aventuras incríveis.</p>
+            <a href="Sobreojogo.html" class="cta-button">Ver história</a>
+        </div>
+    </section>
+ <!-- /* ________________________________________________________________________________________ */ -->
+    <div class="slider-container">
             <div class="slider">
                 <div class="slide">
                     <img src="img/slider1.jpg" alt="Slider 1">
@@ -86,26 +111,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-content">
-            <h2>Bem-vindo ao mundo do nosso RPG</h2>
-            <p>Explore e mergulhe em aventuras incríveis.</p>
-            <a href="#" class="cta-button">Ver Jogos</a>
-        </div>
-    </section>
-
-    <section class="game-list">
-        <h3>Conheça Nosso Jogo</h3>
-        <div class="carousel">
-            <div class="game-card">
-                <img src="img/dayflorest.png" alt="Nome do Jogo 1">
-                <h4>Nome do Jogo 1</h4>
-                <p>Uma descrição breve e empolgante do Jogo 1. Entre na ação agora mesmo!</p>
-                <a href="#">Saiba Mais</a>
-            </div>
-            <!-- Adicione mais game-cards conforme necessário -->
-        </div>
-    </section>
-
+ <!-- /* ________________________________________________________________________________________ */ -->
     <footer>
         <p>&copy; 2023 Jogos Incríveis. Todos os direitos reservados.</p>
     </footer>
