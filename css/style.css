@@ -315,9 +315,37 @@ header h1 {
 
 /* Rodapé */
 footer {
+  margin-top: 550px;
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 10px 0;
   border-top: 2px solid #114b44;
 }
+
+.developer {
+  position: relative;
+  margin: 20px;
+ padding-left: 100px;
+  width: 200px;
+  float: left;
+  align-items: center;
+}
+
+.developer img {
+  width: 250px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 250px; /* Ajuste o tamanho da imagem conforme necessário */
+  border-radius: 50%; /* Torna a imagem redonda */
+  overflow: hidden; /* Oculta as partes fora da borda arredondada */
+}
+
+.developer-info {
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+  width: 350px;
+  color: #fff;
+  margin-left: -10%;
+}
+
+
