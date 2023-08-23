@@ -3,9 +3,9 @@
     ## ALERTA EM MODO PROFISSIONAL ARQUIVO DEVE-SE MANTER OCULTO E PROTEGIDO ##
 
     ## LOCALIZA O PC OU SERVIDOR COM O BANCO (NOME DO COMPUTADOR)
-    $servidor = "localhost";
+    $servidor = "localhost:3306";
     ## NOME DO BANCO
-    $banco = "Magicat";
+    $banco = "Magicatsite";
     ##USUARIO DE ACESSO
     $usuario = "admin";
     ##SENHA DO USUARIO
