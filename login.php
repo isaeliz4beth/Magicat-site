@@ -33,10 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Magicats - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="images/flaticon.png" href="images/flaticon.png">
     <title>LOGIN USUARIO</title>
     <style>
         body, h3, h4, h5, h6, p {

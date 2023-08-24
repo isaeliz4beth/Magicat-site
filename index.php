@@ -10,7 +10,7 @@ $nomeCliente = $isAuthenticated ? $_SESSION['nomecliente'] : "";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melhor Jogo de RPG - Página Inicial</title>
+    <title>Magicats </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="images/flaticon.png" href="images/flaticon.png">
     <link rel="stylesheet" href="css/slider.css">
@@ -52,24 +52,10 @@ $nomeCliente = $isAuthenticated ? $_SESSION['nomecliente'] : "";
             </ul>
         </nav>
         <div class="imagemlogo">
-            <img src="img/logoINDEX.png" alt="Logo do Projeto" height="100">
+            <img src="img/logoINDEX.png" alt="Logo do Projeto" height="200">
         </div>
         <h1>Melhor Jogo de RPG</h1>
     </header>
-    <div class="carousel">
-        <div class="game-card">
-            <img src="img/dayflorest.png" alt="Nome do Jogo 1">
-            <h4>Nome do Jogo 1</h4>
-            <p>Uma descrição breve e empolgante do Jogo 1. Entre na ação agora mesmo!</p>
-            <a href="">Saiba Mais</a>
-        </div>
-        <div class="game-card">
-            <img src="img/dayflorest.png" alt="Nome do Jogo 1">
-            <h4>Nome do Jogo 1</h4>
-            <p>Uma descrição breve e empolgante do Jogo 1. Entre na ação agora mesmo!</p>
-            <a href="#">Saiba Mais</a>
-        </div>
-    </div>
     <section class="hero">
         <div class="hero-content">
             <h2>Bem-vindo ao mundo do nosso RPG!</h2>
@@ -77,19 +63,7 @@ $nomeCliente = $isAuthenticated ? $_SESSION['nomecliente'] : "";
             <a href="Sobreojogo.html" class="cta-button">Ver história</a>
         </div>
     </section>
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide">
-                <img src="img/slider1.jpg" alt="Slider 1">
-            </div>
-            <div class="slide">
-                <img src="img/slider2.jpg" alt="Slider 2">
-            </div>
-            <div class="slide">
-                <img src="img/slider3.jpg" alt="Slider 3">
-            </div>
-        </div>
-    </div>
+
     <footer>
         <p>&copy; <?= date("Y"); ?> Magicats the game. Todos os direitos reservados.</p>
     </footer>
