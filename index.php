@@ -58,7 +58,7 @@ $nomeCliente = $isAuthenticated ? $_SESSION['nomecliente'] : "";
     </header>
     <section class="hero">
         <div class="hero-content">
-            <h2>Bem-vindo ao mundo do nosso RPG!</h2>
+            <h2>Bem-vindo ao mundo do nosso RPG!</h2> 
             <p>Explore e mergulhe em aventuras incríveis.</p>
             <a href="Sobreojogo.html" class="cta-button">Ver história</a>
         </div>
