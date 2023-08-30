@@ -105,6 +105,13 @@ header h1 {
 
 /* _____________________________________CAROUSEL___________________________________________________ */
 /* Game Cards */
+
+.h2jogo, .h1jogo, .h2dev{
+  color: #ffffff;
+  text-shadow: 0 7px 10px rgba(0, 0, 0, 0.74);
+}
+
+
 .carousel {
   display: inline-block; /* Coloca os carousels um ao lado do outro */
   margin-right: 20px; /* Espaçamento entre os carousels */
@@ -332,17 +339,18 @@ footer {
 .developer {
   position: relative;
   margin: 20px;
- padding-left: 100px;
+  padding-left: 100px;
   width: 200px;
   float: left;
   align-items: center;
 }
 
 .developer img {
-  width: 250px; /* Ajuste o tamanho da imagem conforme necessário */
-  height: 250px; /* Ajuste o tamanho da imagem conforme necessário */
+  width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 300px; /* Ajuste o tamanho da imagem conforme necessário */
   border-radius: 50%; /* Torna a imagem redonda */
   overflow: hidden; /* Oculta as partes fora da borda arredondada */
+  box-shadow: 0 7px 10px rgba(253, 253, 253, 0.582);
 }
 
 .developer-info {
@@ -352,7 +360,6 @@ footer {
   width: 350px;
   color: #fff;
   margin-left: -10%;
+  text-shadow: 0 7px 10px rgba(0, 0, 0, 0.74);
+
 }
-
-
-

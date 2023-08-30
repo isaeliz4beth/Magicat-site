@@ -29,7 +29,7 @@ $nomeCliente = $isAuthenticated ? $_SESSION['nomecliente'] : "";
         }
         @font-face {
             font-family: 'FonteCorpo';
-            src: url(fonts/Montserrat-Thin.ttf);
+            src: url(fonts/Montserrat-Regular.ttf);
         }
     </style>
 </head>
